@@ -1,0 +1,106 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="dependencies/vue.min.js"></script>
+  <script src="dependencies/vue-router.min.js"></script>
+  <script src="dependencies/http-vue-loader.min.js"></script>
+  <script src="dependencies/axios.min.js"></script>
+  <script src="dependencies/BigEval.min.js"></script>
+  <title>JSCALC</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 center-column">
+        <div class="row">
+          <div class="col-xs-12 col-md-12" id="calc">
+            <div class="row">
+              <div class="col-xs-12 col-md-12 center-column" id="lcd">
+                <input type="text" maxlength="99" v-model="lcd" @keyup.enter="evaluate">
+              </div>
+            </div>
+            <div class="row" id="clear-buttons">
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-danger btn-block" @click="allClear">AC</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="backspace">
+                  <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="col-xs-6 col-md-6 text-center">
+                <div id="logo">
+                  <strong>JSCALC</strong>
+                </div>
+              </div>
+            </div>
+            <div class="row buttons">
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(7)">7</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(8)">8</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(9)">9</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="update('÷')">÷</button>
+              </div>
+            </div>
+            <div class="row buttons">
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(4)">4</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(5)">5</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(6)">6</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="update('x')">x</button>
+              </div>
+            </div>
+            <div class="row buttons">
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(1)">1</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(2)">2</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(3)">3</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="update('-')">-</button>
+              </div>
+            </div>
+            <div class="row buttons" id="last-row-buttons">
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update(0)">0</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-primary btn-block" @click="update('.')">.</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="evaluate">=</button>
+              </div>
+              <div class="col-xs-3 col-md-3 mod-col-padding">
+                <button class="btn btn-default btn-block" @click="update('+')">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="module" src="index.js"></script>
+
+<script src="models/global.models.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">

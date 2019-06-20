@@ -1,0 +1,147 @@
+body {
+  background-color: #c7e8e1;
+  margin: 20px 0 20px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.center-column {
+  margin: 0 auto;
+  float: none;
+}
+
+.mod-col-padding {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+#clear-buttons {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+.btn-primary:active {
+  background-color: #333 !important;
+  position: relative;
+  top: 6px;
+}
+
+.btn-primary:focus {
+  background-color: #333 !important;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #333;
+  border-radius: 10px;
+  color: white;
+  border-color: #333;
+  box-shadow: 0px 6px #222, -3px 9px 1px #BBB;
+  outline: none !important;
+  font-size: 1.25em;
+
+}
+
+.btn-default {
+  background-color: #888;
+  border-radius: 10px;
+  color: white;
+  border-color: #888;
+  box-shadow: 0px 6px #777, -3px 9px 1px #BBB;
+  outline: none !important;
+  font-size: 1.25em;
+}
+
+.btn-default:hover {
+  background-color: #888;
+  color: white;
+  border-color: #888;
+}
+
+.btn-default:active {
+  background-color: #888 !important;
+  color: white !important;
+  position: relative;
+  top: 6px;
+}
+
+.btn-default:focus {
+  background-color: #888 !important;
+  color: white !important;
+  outline: none;
+}
+
+.btn-danger {
+  border-radius: 10px;
+  border-color: #d9534f;
+  box-shadow: 0px 6px #d1332e, -3px 9px 1px #BBB;
+  outline: none !important;
+  font-size: 1.25em;
+}
+
+.btn-danger:hover {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.btn-danger:focus {
+  border-color: #d9534f;
+  background-color: #d9534f;
+  outline: none;
+}
+
+.btn-danger:active {
+  border-color: #d9534f !important;
+  background-color: #d9534f !important;
+  outline: none;
+  position: relative;
+  top: 6px;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#lcd input {
+  font-family: 'share tech mono';
+  color: white;
+  text-align: right;
+  font-size: 2.6em;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #222;
+  box-shadow: 0px 3px #BBB inset;
+  border-style: none;
+  width: 100%;
+}
+
+#logo {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.8em;
+}
+
+#calc {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e5de;
+  box-shadow: 0 10px #AAA, 0 3px 5px #BBB inset, 5px 20px 20px black;
+  /*-webkit-box-shadow: 3px 3px 5px #222, 0 3px 5px #BBB inset;*/
+}
+
+#last-row-buttons {
+  margin-bottom: 20px;
+}
